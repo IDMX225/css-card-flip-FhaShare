@@ -1,16 +1,69 @@
 /* typography */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@font-face {
+    font-family: 'Nunito';
+    font-weight: 200 1000;
+    src: url("/src/fonts/Nunito-VariableFont_wght.ttf") format("truetype");
+}
 
-$font: "Poppins", serif;
+@font-face {
+    font-family: 'Nunito';
+    font-style: italic;
+    font-weight: 200 1000;
+    src: url("/src/fonts/Nunito-Italic-VariableFont_wght.ttf") format("truetype");
+}
 
-// body font styling vars
-$body-font-size: 120%;
+@font-face {
+    font-family: 'Ovo';
+    src: url("/fonts/Ovo-Regular.ttf") format("truetype");
+}
+
+/* Define typography variables */
+
+$font: 'Nunito', sans-serif;
+$font-title: 'Ovo', serif;
+
+/* Body font styling */
+$body-font-size: 100%;
 $body-font-weight: 350;
 $body-italic-weight: 100;
 
-// display font styling vars
+/* Display font styling */
 $display-font: $font;
 $display-weight: 900;
-$display-spacing: 0.15em;
-$display-title-size: 4rem;
+$display-spacing: 0.1rem;
+$display-title-size: 2rem;
+
+/* Body styling */
+body {
+    font-family: $font;
+    font-size: $body-font-size;
+    font-weight: $body-font-weight;
+    line-height: 1.5;
+}
+
+/* Header styling */
+h1 {
+    font-family: $font-title;
+    font-weight: $display-weight;
+    letter-spacing: $display-spacing;
+    font-size: $display-title-size;
+}
+
+h2 {
+    font-family: $font-title;
+    font-weight: $display-weight;
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: $font-title;
+    font-weight: $display-weight;
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-family: $font;
+    font-weight: $display-weight;
+    font-size: 1rem;
+}
